@@ -30,6 +30,7 @@
 2024h\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 2024h\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 2024h\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+2024h\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 2024h\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h
 2024h\stm32f4xx_it.o: ../Middle/FreeRTOS/include/FreeRTOS.h
 2024h\stm32f4xx_it.o: ../Core/Inc/FreeRTOSConfig.h

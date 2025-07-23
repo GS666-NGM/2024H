@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -87,8 +88,12 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-       Car_Init();
+  __HAL_UART_ENABLE_IT(&huart1, UART_IT_IDLE);
+    HAL_UART_Receive_IT(&huart1, (uint8_t*)debugrxdata, 30);
+    __HAL_UART_CLEAR_IDLEFLAG(&huart1);
+//       Car_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */

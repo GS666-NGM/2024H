@@ -2,6 +2,7 @@
 #define __RESCUE_CAR_H
 #include "FreeRTOS.h"
 #include "task.h"
+#include "usart.h"
 //#include "encoder.h"
 //#include "jy901s.h"
 //#include "Xbox.h"
@@ -23,7 +24,7 @@
 
 void Car_Init(void);
 
-//extern char debugrxdata[30];
+extern char debugrxdata[30];
 //extern float mileage;
 //extern uint8_t positionflag;
 

@@ -78,8 +78,8 @@ void  Car_Start(void* pv)
 //short enl, enr;
 //float x, y; 
 //float tx, ty;
-//char debugrxdata[30];
-//uint8_t debugflag;
+char debugrxdata[30];
+uint8_t debugflag;
 //uint8_t positionflag = 10;
 
 uint8_t tick1, tick2, tick3;
@@ -259,11 +259,11 @@ void Debug_Task(void* pv)
 //    
 //}
 
-//void HAL_UART_AbortReceiveCpltCallback(UART_HandleTypeDef *huart)
-//{
-//    if(huart->Instance == USART1)
-//    {
-//        debugflag = 1;
-//        HAL_UART_Receive_IT(&huart1, (uint8_t*)debugrxdata, 30);
-//    }
-//}
+void HAL_UART_AbortReceiveCpltCallback(UART_HandleTypeDef *huart)
+{
+    if(huart->Instance == USART1)
+    {
+        debugflag = 1;
+        HAL_UART_Receive_IT(&huart1, (uint8_t*)debugrxdata, 30);
+    }
+}
